@@ -20,6 +20,10 @@ RUN git clone https://github.com/pytorch/fairseq && \
     git checkout d792b793a777bf660d2aaeb095c2381af189e626 && \
     pip install . --no-cache-dir
 
+# Installing fairseq will install PyTorch, but the default CUDA toolkit version is 10.2. The
+# A100 GPUs require a CUDA 11 or higher, so we explicitly reinstall PyTorch with CUDA 11
+RUN pip install torch==1.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+
 # This command installs additional python dependencies
 RUN pip install requests==2.26.0 rouge-score==0.0.4 --no-cache-dir
 

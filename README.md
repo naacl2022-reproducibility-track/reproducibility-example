@@ -34,11 +34,11 @@ The expected result is
 
 The command using the GPU is
 ```shell script
-docker run -it --runtime nvidia tutorial
+docker run -it --gpus 0 tutorial
 ```
 and the expected result is
 ```json
-{"rouge1": "41.65", "rouge2": "18.33"}
+{"rouge1": "40.95", "rouge2": "18.56"}
 ```
 
 ## Issues & Questions
