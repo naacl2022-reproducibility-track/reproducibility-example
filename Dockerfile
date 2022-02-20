@@ -1,6 +1,6 @@
 # This is the base image that our image builds on. It is based on
-# Debian and uses Python 3.7 by default. CUDA 10.0 is installed.
-FROM pure/python:3.7-cuda10.0-base
+# Debian and uses Python 3.7 by default. CUDA 11 is installed.
+FROM danieldeutsch/python:3.7-cuda11.0.3-base
 
 # This sets the working directory which will be the location
 # from which all of the subsequent commands will be run
