@@ -15,6 +15,8 @@ The repository contains the following contents:
         
     - `Dockerfile`: The final Dockerfile created in the tutorial
     - `reproduce.sh`: The script which is run within the Docker container and outputs the string which is used to verify the results are reproducible.
+    - `expected.txt` contains the output text which is expected to be contained in the logs if you run the Docker container with a GPU.
+      It can be used along with the "naacl-utils verify" command to verify your Docker image outputs the expected result.
 
 ## Reproducing the Results
 The Docker image can be built by running:
